@@ -49,37 +49,32 @@ console.log("DATABASE_URL =", process.env.DATABASE_URL);
   return fileConfig;
 };
 
-const config = buildConfig(env, configFile);
-
+// const config = buildConfig(env, configFile);
+const config = configFile;
 let sequelize;
-if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config);
+
+console.log("NODE_ENV =", process.env.NODE_ENV);
+console.log("DATABASE_URL exists =", !!process.env.DATABASE_URL);
+
+if (process.env.DATABASE_URL) {
+    sequelize = new Sequelize(process.env.DATABASE_URL, {
+        dialect: 'mysql',
+        logging: false,
+        dialectOptions: {
+            ssl: {
+                require: true,
+                rejectUnauthorized: false
+            }
+        }
+    });
 } else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
-}
-
-fs
-  .readdirSync(__dirname)
-  .filter(file => {
-    return (
-      file.indexOf('.') !== 0 &&
-      file !== basename &&
-      file.slice(-3) === '.js' &&
-      file.indexOf('.test.js') === -1
+    sequelize = new Sequelize(
+        config.database,
+        config.username,
+        config.password,
+        config
     );
-  })
-  .forEach(file => {
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
-    db[model.name] = model;
-  });
-
-Object.keys(db).forEach(modelName => {
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
-  }
-});
-
-db.sequelize = sequelize;
+}
 db.Sequelize = Sequelize;
 
 module.exports = db;

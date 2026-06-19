@@ -44,7 +44,7 @@ let letHashUserPassword = (password) => {
 let getAllUser = () => {
     return new Promise(async (resolve, reject) =>{
         try {
-            let users = db.users.findAll({
+            let users = await db.users.findAll({
                 raw : true,
             });
             resolve(users)
