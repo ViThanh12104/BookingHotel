@@ -2,6 +2,8 @@ import roomService from "../services/roomService";
 import { asyncHandler } from "../middleware/errorHandler";
 import { BadRequestError, NotFoundError } from "../utils/errors";
 
+const BASE_URL = process.env.BASE_URL || 'http://localhost:8080';
+
 let handleEditRoom = asyncHandler(async (req, res) => {
     let payload = req.body;
 
@@ -13,7 +15,7 @@ let handleEditRoom = asyncHandler(async (req, res) => {
     ) {
         req.files.roomImages.forEach(item => {
             payload.images.push(
-                `http://localhost:8080/images/${item.filename}`
+                `${BASE_URL}/images/${item.filename}`
             );
         });
     }
@@ -42,7 +44,7 @@ let handleCreateRoom = asyncHandler(async (req, res) => {
     ) {
         req.files.roomImages.forEach(item => {
             payload.images.push(
-                `http://localhost:8080/images/${item.filename}`
+                `${BASE_URL}/images/${item.filename}`
             );
         });
     }

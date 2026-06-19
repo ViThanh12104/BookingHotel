@@ -13,6 +13,9 @@ const db = {};
 
 // Build config from environment variables, falling back to config.json
 const buildConfig = (env, fileConfig) => {
+  console.log("ENV =", env);
+console.log("CONFIG =", config);
+console.log("DATABASE_URL =", process.env.DATABASE_URL);
   if (env === 'development') {
     return {
       username: process.env.DB_DEV_USERNAME || fileConfig.username,
