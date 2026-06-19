@@ -2,6 +2,8 @@ import hotelService from "../services/hotelService";
 import { asyncHandler } from "../middleware/errorHandler";
 import { BadRequestError, NotFoundError } from "../utils/errors";
 
+
+const BASE_URL = process.env.BASE_URL || 'http://localhost:8080';
 /*
 ========================================
 Lấy tất cả khách sạn
@@ -116,7 +118,7 @@ let handleEditHotel = asyncHandler(async (req, res) => {
 
     // THUMBNAIL
     if (req.files && req.files.thumbnail) {
-        data.thumbnail = `http://localhost:8080/images/${req.files.thumbnail[0].filename}`;
+        data.thumbnail = `${BASE_URL}/images/${req.files.thumbnail[0].filename}`;
     }
 
     // HOTEL IMAGES
@@ -124,7 +126,7 @@ let handleEditHotel = asyncHandler(async (req, res) => {
 
     if (req.files && req.files.hotelImages) {
         req.files.hotelImages.forEach((item) => {
-            data.images.push(`http://localhost:8080/images/${item.filename}`);
+            data.images.push(`${BASE_URL}/images/${item.filename}`);
         });
     }
 
@@ -146,15 +148,15 @@ let handleCreateHotel = asyncHandler(async (req, res) => {
 
     // THUMBNAIL
     if (req.files && req.files.thumbnail) {
-        data.thumbnail = `http://localhost:8080/images/${req.files.thumbnail[0].filename}`;
+        data.thumbnail = `${BASE_URL}/images/${req.files.thumbnail[0].filename}`;
     }
 
     // HOTEL IMAGES
     data.images = [];
 
     if (req.files && req.files.hotelImages) {
-        req.files.hotelImages.forEach(item => {
-            data.images.push(`http://localhost:8080/images/${item.filename}`);
+        req.files.hotelImages.forEach((item) => {
+            data.images.push(`${BASE_URL}/images/${item.filename}`);
         });
     }
 
