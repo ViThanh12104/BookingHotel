@@ -3,7 +3,6 @@ import CRUDService from "../services/CRUDService";
 
 
 let getHomePage = async (req, res) => {
-    console.log("DB KEYS:", Object.keys(db));
 
     try {
         let data = await db.users.findAll();
