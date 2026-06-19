@@ -1,0 +1,93 @@
+.booking-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.booking-container {
+    width: 420px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.booking-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.booking-room {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.room-name {
+    font-weight: bold;
+}
+
+.room-price {
+    color: #555;
+    font-size: 14px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.booking-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.booking-summary {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f5f7fa;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.booking-summary .total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0071c2;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+}
+
+.confirm-btn {
+    margin-top: 10px;
+    padding: 12px;
+    background: #0071c2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.confirm-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}

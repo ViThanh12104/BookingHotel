@@ -1,0 +1,155 @@
+/*
+ * General styles
+ */
+
+body,
+html {
+    background: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $fontmain;
+    font-size: $base-size - 2px;
+
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    height: 30px;
+    line-height: 30px;
+    user-select: none;
+
+    i {
+        font-size: $base-size - 3px;
+    }
+}
+
+.btn-edit,
+.btn-add,
+.btn-delete,
+.btn-assign {
+    background-color: $colormain;
+    color: $common-text-color;
+
+    &:hover {
+        color: $common-text-color;
+        background-color: darken($colormain, 5);
+    }
+}
+
+/* =========================
+   PASSWORD PLACEHOLDER FIX
+========================= */
+
+#password:invalid {
+    font-family: $fontmain;
+}
+
+#password:-webkit-input-placeholder {
+    font-family: $fontmain;
+}
+
+#password::-webkit-input-placeholder {
+    font-family: $fontmain;
+}
+
+#password:-moz-placeholder {
+    font-family: $fontmain;
+}
+
+#password::-moz-placeholder {
+    font-family: $fontmain;
+}
+
+#password:-ms-input-placeholder {
+    font-family: $fontmain;
+}
+
+#password::-ms-input-placeholder {
+    font-family: $fontmain;
+}
+
+#password::placeholder {
+    font-family: $fontmain;
+}
+
+/* =========================
+   CONTENT CONTAINER
+========================= */
+
+.content-container {
+    width: 100%;
+    min-height: 100vh;
+
+    .title {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: $base-size + 4px;
+        margin-top: 15px;
+        color: $colormain;
+    }
+
+    .content {
+        margin: 15px 30px;
+        box-shadow: 2px 2px 4px 0 $box-shadow-color;
+        -webkit-box-shadow: 2px 2px 4px 0 $box-shadow-color;
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px;
+    }
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    .modal-dialog {
+        .modal-content {
+            border-radius: 10px;
+            overflow: hidden;
+
+            .modal-header {
+                padding: 0 15px;
+                height: 45px;
+                background-color: $colormain;
+                color: $common-text-color;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .modal-title {
+                    line-height: 45px;
+                    font-weight: 600;
+                    font-size: $base-size + 2px;
+                }
+
+                .btn-close {
+                    color: $common-text-color;
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+
+                    i {
+                        line-height: 45px;
+                        font-size: $base-size + 2px;
+                    }
+                }
+            }
+        }
+    }
+}

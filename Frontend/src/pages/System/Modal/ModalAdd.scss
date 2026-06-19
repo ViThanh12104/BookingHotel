@@ -1,0 +1,416 @@
+/* =========================
+MODAL OVERLAY
+========================= */
+
+.hotel-modal-overlay {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+}
+
+/* =========================
+MODAL CONTAINER
+========================= */
+
+.hotel-modal-container {
+
+    width: 900px;
+
+    max-width: 100%;
+
+    max-height: 92vh;
+
+    overflow-y: auto;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+
+    animation: fadeModal 0.25s ease;
+}
+
+@keyframes fadeModal {
+
+    from {
+
+        transform: translateY(-20px);
+
+        opacity: 0;
+    }
+
+    to {
+
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+/* =========================
+HEADER
+========================= */
+
+.hotel-modal-header {
+
+    padding: 22px 28px;
+
+    border-bottom: 1px solid #eee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.hotel-modal-header h3 {
+
+    margin: 0;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    color: #222;
+}
+
+.hotel-modal-header span {
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    color: #888;
+
+    transition: 0.3s;
+}
+
+.hotel-modal-header span:hover {
+
+    color: #ff4d4f;
+}
+
+/* =========================
+BODY
+========================= */
+
+.hotel-modal-body {
+
+    padding: 28px;
+}
+
+/* =========================
+GRID
+========================= */
+
+.hotel-form-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+}
+
+/* =========================
+FORM GROUP
+========================= */
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 24px;
+}
+
+.form-group label {
+
+    margin-bottom: 10px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #333;
+}
+
+/* =========================
+INPUT
+========================= */
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    padding: 14px 16px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+    background: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: #1677ff;
+
+    box-shadow: 0 0 0 3px rgba(22,119,255,0.1);
+}
+
+.form-group textarea {
+
+    min-height: 180px;
+
+    resize: none;
+
+    line-height: 1.7;
+}
+
+/* =========================
+UPLOAD BUTTON
+========================= */
+
+.upload-image-btn {
+
+    width: fit-content;
+
+    background: #f5f7fb;
+
+    border: 1px dashed #1677ff;
+
+    color: #1677ff;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: 0.3s;
+}
+
+.upload-image-btn:hover {
+
+    background: #eef4ff;
+}
+
+/* =========================
+THUMBNAIL
+========================= */
+
+.preview-thumbnail {
+
+    margin-top: 18px;
+}
+
+.preview-thumbnail img {
+
+    width: 240px;
+
+    height: 160px;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    border: 1px solid #ddd;
+
+    display: block;
+
+    background: #f5f5f5;
+}
+
+/* =========================
+HOTEL IMAGES
+========================= */
+
+.preview-hotel-images {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 18px;
+}
+
+.preview-hotel-images img {
+
+    width: 140px;
+
+    height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 1px solid #ddd;
+
+    display: block;
+
+    background: #f5f5f5;
+
+    transition: 0.3s;
+}
+
+.preview-hotel-images img:hover {
+
+    transform: scale(1.03);
+}
+
+/* FIX GLOBAL IMG */
+
+.preview-thumbnail img,
+.preview-hotel-images img {
+
+    max-width: unset !important;
+
+    opacity: 1 !important;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.hotel-modal-footer {
+
+    padding: 22px 28px;
+
+    border-top: 1px solid #eee;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 14px;
+}
+
+/* =========================
+SAVE BUTTON
+========================= */
+
+.btn-save-hotel {
+
+    border: none;
+
+    background: #1677ff;
+
+    color: white;
+
+    height: 46px;
+
+    padding: 0 28px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-save-hotel:hover {
+
+    background: #0958d9;
+}
+
+/* =========================
+CANCEL BUTTON
+========================= */
+
+.btn-cancel-hotel {
+
+    border: none;
+
+    background: #f1f1f1;
+
+    color: #444;
+
+    height: 46px;
+
+    padding: 0 28px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-cancel-hotel:hover {
+
+    background: #ddd;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .hotel-form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .hotel-modal-container {
+
+        width: 100%;
+    }
+
+    .preview-thumbnail img {
+
+        width: 100%;
+        height: 220px;
+    }
+
+    .preview-hotel-images img {
+
+        width: calc(50% - 10px);
+    }
+}

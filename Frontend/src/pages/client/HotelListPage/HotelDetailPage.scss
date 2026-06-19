@@ -1,0 +1,804 @@
+/* src/pages/client/HotelDetailPage/HotelDetailPage.scss */
+/* style gần như Booking.com thật */
+
+.hotel-detail-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f5f5;
+}
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.hotel-detail-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 32px 0 80px;
+}
+
+/* ========================================
+   TOP HEADER
+======================================== */
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.detail-left h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+    max-width: 760px;
+    line-height: 1.1;
+    word-break: break-word;
+}
+
+/* location */
+
+.hotel-location {
+    font-size: 15px;
+    color: #0071c2;
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hotel-location i {
+    font-size: 14px;
+}
+
+/* review */
+
+.hotel-review {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-score {
+    background: #003b95;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 8px 8px 8px 0;
+}
+
+.review-text {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+}
+
+/* reserve button */
+
+.reserve-btn {
+    height: 52px;
+    padding: 0 28px;
+    border: none;
+    border-radius: 8px;
+    background: #0071c2;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reserve-btn:hover {
+    background: #005999;
+}
+
+/* ========================================
+   MAIN IMAGE
+======================================== */
+
+.main-hotel-image {
+    width: 100%;
+    height: 520px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    background: #eee;
+}
+
+.main-hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ========================================
+   DESCRIPTION BOX
+======================================== */
+
+/* phần mô tả khách sạn xuống dòng đẹp hơn */
+
+.hotel-description {
+    background: #fff;
+    padding: 28px 32px;
+    border-radius: 12px;
+    margin-top: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+
+    h2 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+
+        white-space: pre-line;
+        line-height: 1.9;
+        text-align: justify;
+
+        margin: 0;
+    }
+}
+
+
+/* ========================================
+   REVIEW SECTION
+======================================== */
+
+.hotel-reviews {
+    margin-top: 24px;
+    background: #fff;
+    border: 1px solid #d9e2ec;
+    border-radius: 24px;
+    box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+    padding: 32px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+}
+
+.review-overview {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid #eef2ff;
+}
+
+.overview-score {
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.overview-score .avg {
+    font-size: 40px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.overview-score .stars {
+    color: #f59e0b;
+    margin-top: 6px;
+    font-size: 18px;
+}
+
+.overview-score .total {
+    margin-top: 6px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.rating-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.star-label {
+    width: 36px;
+    font-size: 13px;
+    color: #334155;
+}
+
+.bar {
+    flex: 1;
+    height: 10px;
+    background: #f1f5f9;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg,#60a5fa,#3b82f6);
+}
+
+.count {
+    width: 36px;
+    text-align: right;
+    font-size: 13px;
+    color: #475569;
+}
+
+.review-summary {
+    background: #f8fafc;
+    border: 1px solid #d9e2ec;
+    border-radius: 20px;
+    padding: 22px 24px;
+    margin-bottom: 24px;
+}
+
+.review-summary-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.review-summary p {
+    margin: 0;
+    font-size: 15px;
+    color: #334155;
+    line-height: 1.8;
+}
+
+.hotel-reviews h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 18px;
+}
+
+.no-reviews {
+    padding: 28px 0;
+    text-align: center;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.review-item {
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+    border: 1px solid #e2e8f0;
+}
+
+.review-item:last-child {
+    margin-bottom: 0;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.review-header strong {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.rating {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #feeccf;
+    color: #b45309;
+    font-size: 13px;
+    font-weight: 700;
+    min-width: 72px;
+}
+
+.review-body {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 12px;
+}
+
+.review-meta {
+    font-size: 13px;
+    color: #64748b;
+}
+
+@media (max-width: 992px) {
+    .hotel-reviews {
+        padding: 24px;
+    }
+
+    .review-item {
+        padding: 20px;
+    }
+}
+
+.review-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.review-filter span {
+    color: #475569;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.filter-btn {
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #fff;
+}
+
+.toggle-review-list {
+    display: inline-flex;
+    margin-top: 12px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid #2563eb;
+    background: #ffffff;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle-review-list:hover {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   ROOM SECTION
+======================================== */
+
+.room-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 18px;
+}
+
+.room-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ========================================
+   ROOM CARD
+======================================== */
+
+.room-card {
+    display: flex;
+    gap: 20px;
+    background: #fff;
+    border: 1px solid #d9e2ec;
+    border-radius: 12px;
+    padding: 16px;
+    align-items: center;
+}
+
+.room-left {
+    flex: 1;
+}
+
+.room-left h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+/* ảnh */
+.room-image {
+    width: 220px;
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* info */
+.room-info {
+    flex: 1;
+
+    h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+}
+
+.room-desc {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* benefits */
+
+.room-benefit {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.room-benefit.green {
+    color: #008009;
+    font-weight: 600;
+}
+
+/* status */
+
+.room-status {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #666;
+}
+
+
+/* ========================================
+   RIGHT SIDE
+======================================== */
+
+.room-price-box {
+    width: 220px;
+    text-align: right;
+}
+
+.room-right {
+    min-width: 240px;
+    text-align: right;
+}
+
+.room-price {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111;
+}
+
+.room-price-sub {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 14px;
+}
+
+/* booking button */
+
+.book-room-btn {
+    width: 100%;
+    height: 44px;
+    background: #0071c2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.book-room-btn:hover {
+    background: #005999;
+}
+
+/* ========================================
+   NO DATA
+======================================== */
+
+.no-data {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 18px;
+    color: #666;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media screen and (max-width: 1200px) {
+    .hotel-detail-container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .detail-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .room-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .room-right {
+        width: 100%;
+        text-align: left;
+    }
+
+    .book-room-btn {
+        width: 100%;
+    }
+
+    .main-hotel-image {
+        height: 300px;
+    }
+}
+
+.hotel-map-section {
+    margin: 40px 0;
+}
+
+.hotel-map-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #111;
+}
+
+.hotel-map {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.hotel-map iframe {
+    display: block;
+}
+
+
+
+
+.hotel-gallery {
+    width: 100%;
+    max-width: 1280px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ===== HÀNG TRÊN ===== */
+
+.gallery-top {
+    display: flex;
+    gap: 12px;
+    height: 520px;
+}
+
+/* Ảnh lớn bên trái */
+
+.gallery-main {
+    flex: 2.2;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f5f5f5;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: 0.3s;
+    }
+
+    &:hover img {
+        transform: scale(1.03);
+    }
+}
+
+/* 2 ảnh dọc bên phải */
+
+.gallery-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.gallery-right-item {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f5f5f5;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: 0.3s;
+    }
+
+    &:hover img {
+        transform: scale(1.03);
+    }
+}
+
+/* ===== HÀNG DƯỚI ===== */
+
+.gallery-bottom {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    height: 170px;
+}
+
+.gallery-bottom-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f5f5f5;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: 0.3s;
+    }
+
+    &:hover img {
+        transform: scale(1.03);
+    }
+}
+
+/* ô cuối cùng +160 ảnh */
+
+.more-images {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+
+
+.image-preview-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 30px;
+}
+
+.preview-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.preview-content img {
+    width: 100%;
+    max-width: 1200px;
+    max-height: 85vh;
+    object-fit: contain;
+    display: block;
+}
+
+.image-preview-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.82);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.preview-content {
+    position: relative;
+    width: fit-content;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        max-width: 1200px;
+        max-height: 85vh;
+        width: auto;
+        height: auto;
+        border-radius: 14px;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+.preview-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #111;
+    font-size: 38px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+    transition: 0.2s;
+}
+
+.preview-arrow:hover {
+    transform: translateY(-50%) scale(1.06);
+}
+
+.preview-arrow.left {
+    left: 20px;
+}
+
+.preview-arrow.right {
+    right: 20px;
+}

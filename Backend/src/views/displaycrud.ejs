@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetCRUD</title>
+</head>
+
+<body>
+    <table style="width:100%">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Action</th>
+    </tr>
+
+    <% for(let i = 0; i < dataTable.length; i++) { %>
+        <tr>
+            <td><%= dataTable[i].name %></td>
+            <td><%= dataTable[i].email %></td>
+            <td><%= dataTable[i].phone %></td>
+            <td><%= dataTable[i].address %></td>
+            <td>
+                <a href="/edit-crud?id=<%= dataTable[i].id %>" type="button" class="btn-edit">Edit</a>
+                <a href="/delete-crud?id=<%= dataTable[i].id %>" type="button" class="btn-delete">Remove</a>
+            </td>
+        </tr>
+    <% } %>
+
+</table>
+
+    </table>
+</body>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    .btn-edit{
+        outline: none;
+        border: none;
+        background: orange;
+        height: 25px;
+        width: 60px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .btn-delete{
+        outline: none;
+        border: none;
+        background: rgb(138, 140, 255);
+        height: 25px;
+        width: 60px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+</style>
+
+</html>

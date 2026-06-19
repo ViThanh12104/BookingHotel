@@ -1,0 +1,271 @@
+/* OVERLAY */
+
+.hotel-edit-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+/* CONTAINER */
+
+.hotel-edit-modal-container {
+    width: 900px;
+    max-width: 100%;
+    max-height: 95vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+    animation: modalFade 0.25s ease;
+}
+
+/* ANIMATION */
+
+@keyframes modalFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HEADER */
+
+.hotel-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    border-bottom: 1px solid #eee;
+}
+
+.hotel-modal-header h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+}
+
+.hotel-modal-header span {
+    font-size: 28px;
+    cursor: pointer;
+    color: #777;
+    transition: 0.2s;
+}
+
+.hotel-modal-header span:hover {
+    color: #ff4d4f;
+}
+
+/* BODY */
+
+.hotel-modal-body {
+    padding: 24px;
+}
+
+/* GRID */
+
+.hotel-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+/* FORM GROUP */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* INPUT */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1890ff;
+    box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.15);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* UPLOAD BUTTON */
+
+.upload-image-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1890ff;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+.upload-image-btn:hover {
+    background: #1677d2;
+}
+
+/* THUMBNAIL */
+
+.preview-thumbnail {
+    margin-top: 15px;
+}
+
+.preview-thumbnail img {
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+/* HOTEL IMAGES */
+
+.preview-hotel-images {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.preview-hotel-images img {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: 0.2s;
+}
+
+.preview-hotel-images img:hover {
+    transform: scale(1.03);
+}
+
+/* FOOTER */
+
+.hotel-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    padding: 20px 24px;
+    border-top: 1px solid #eee;
+}
+
+/* BUTTON */
+
+.btn-save-hotel,
+.btn-cancel-hotel {
+    min-width: 120px;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-save-hotel {
+    background: #52c41a;
+    color: white;
+}
+
+.btn-save-hotel:hover {
+    background: #389e0d;
+}
+
+.btn-cancel-hotel {
+    background: #f1f1f1;
+    color: #333;
+}
+
+.btn-cancel-hotel:hover {
+    background: #d9d9d9;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .hotel-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-thumbnail img {
+        width: 100%;
+        height: auto;
+    }
+
+    .preview-hotel-images img {
+        width: calc(50% - 6px);
+    }
+}
+
+/* =========================
+EDIT PREVIEW IMAGE
+========================= */
+
+.preview-image {
+
+    margin-top: 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.preview-image img {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    border: 1px solid #ddd;
+
+    display: block;
+
+    background: #f5f5f5;
+}

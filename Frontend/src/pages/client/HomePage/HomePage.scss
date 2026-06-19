@@ -1,0 +1,377 @@
+/* src/pages/HomePage/HomePage.scss */
+
+.homepage-container {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f7fa;
+}
+
+/* =========================================================
+   CITY SECTION
+========================================================= */
+
+.city-section {
+    width: 1200px;
+    margin: 60px auto 40px;
+}
+
+.city-section .section-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.city-subtitle {
+    font-size: 22px;
+    color: #6b6b6b;
+    margin-bottom: 32px;
+    font-weight: 400;
+}
+
+/* ===== WRAPPER ===== */
+
+.city-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== SCROLL LIST ===== */
+
+.city-list-scroll {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+}
+
+.city-list-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* ===== CARD ===== */
+
+.city-card {
+    min-width: 270px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.city-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ===== IMAGE ===== */
+
+.city-image {
+    width: 100%;
+    height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    background: #f3f3f3;
+}
+
+.city-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== TEXT ===== */
+
+.city-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.city-count {
+    font-size: 16px;
+    color: #6b6b6b;
+    font-weight: 400;
+}
+
+/* ===== SCROLL BUTTON ===== */
+
+.scroll-btn {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-size: 28px;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.scroll-btn:hover {
+    transform: translateY(-50%) scale(1.05);
+}
+
+.scroll-btn.left {
+    left: -24px;
+}
+
+.scroll-btn.right {
+    right: -24px;
+}
+
+/* =========================================================
+   HOTEL LIST SECTION
+========================================================= */
+
+.hotel-list-section {
+    width: 1200px;
+    margin: 70px auto;
+    padding-bottom: 80px;
+}
+
+.section-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 32px;
+    font-weight: 400;
+}
+
+/* ===== GRID ===== */
+
+
+
+.hotel-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 30px;
+}
+
+.hotel-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #e8edf3;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================
+   IMAGE
+===================== */
+
+.hotel-image {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    background: #f3f4f6;
+}
+
+.hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =====================
+   CONTENT
+===================== */
+
+.hotel-info {
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.hotel-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.hotel-top h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.4;
+    margin: 0;
+    flex: 1;
+}
+
+/* =====================
+   RATING BOX
+===================== */
+
+.hotel-rating {
+    background: #003b95;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: fit-content;
+}
+
+.hotel-rating i {
+    color: #febb02;
+    font-size: 14px;
+}
+
+/* =====================
+   TEXT
+===================== */
+
+.hotel-city {
+    color: #0071c2;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hotel-address {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+/* =====================
+   GREEN TAG
+===================== */
+
+.hotel-tag {
+    display: inline-block;
+    width: fit-content;
+    background: #008009;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+/* =====================
+   PRICE
+===================== */
+
+.hotel-price {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 24px;
+}
+
+.hotel-price strong {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111;
+}
+
+/* =====================
+   BUTTON
+===================== */
+
+.view-btn {
+    margin-top: auto;
+    width: 100%;
+    height: 54px;
+    border: none;
+    border-radius: 12px;
+    background: #0071c2;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #005999;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media screen and (max-width: 1024px) {
+    .city-section,
+    .hotel-list-section {
+        width: 95%;
+    }
+
+    .hotel-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .city-section .section-title {
+        font-size: 34px;
+    }
+
+    .city-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hotel-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hotel-image {
+        height: 220px;
+    }
+
+    .city-image {
+        height: 200px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .city-section .section-title {
+        font-size: 30px;
+    }
+
+    .city-subtitle {
+        font-size: 16px;
+    }
+
+    .scroll-btn {
+        display: none;
+    }
+}

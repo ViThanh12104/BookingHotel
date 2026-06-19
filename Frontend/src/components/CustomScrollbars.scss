@@ -1,0 +1,50 @@
+@import "../styles/common.scss";
+
+.custom-scrollbar {
+  position: relative;
+
+  .ps__rail-y {
+    width: 6px !important;
+    right: 2px;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .ps__thumb-y {
+    background-color: rgba($bg-scrollbar, 0.4);
+    border-radius: 10px;
+
+    &:hover {
+      background-color: rgba($bg-scrollbar, 0.8);
+    }
+  }
+
+  &:hover {
+    .ps__rail-y {
+      opacity: 1;
+    }
+  }
+
+  .ps__rail-x {
+    height: 6px !important;
+    bottom: 2px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .ps__thumb-x {
+    background-color: rgba($bg-scrollbar, 0.4);
+    border-radius: 10px;
+
+    &:hover {
+      background-color: rgba($bg-scrollbar, 0.8);
+    }
+  }
+
+  &:hover {
+    .ps__rail-x {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,251 @@
+/* HomeHeader.scss */
+
+.home-header-container {
+    width: 100%;
+    background: #003b95;
+    padding: 20px 0 80px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.home-header-content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== TOP HEADER ===== */
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* LEFT */
+
+.left-content h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* RIGHT */
+
+.right-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-login {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.user-not-login {
+    background: #fff;
+    color: #003b95;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: 0.3s;
+}
+
+.user-not-login:hover {
+    background: #f0f6ff;
+}
+
+/* ===== MENU ===== */
+
+.center-content {
+    margin-bottom: 40px;
+}
+
+.center-content ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.center-content ul li {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 30px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.center-content ul li:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== TITLE ===== */
+
+.header-title {
+    margin-bottom: 35px;
+}
+
+.header-title h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.header-title p {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ===== SEARCH BOX ===== */
+
+.search-box {
+    background: #febb02;
+    padding: 4px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 30px;
+}
+
+.search-item {
+    background: #fff;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    flex: 1;
+    gap: 12px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 6px;
+}
+
+.search-item input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    background: transparent;
+}
+
+.search-item span {
+    color: #333;
+    font-size: 16px;
+}
+
+.search-button {
+    background: #0071c2;
+    color: white;
+    border: none;
+    height: 64px;
+    min-width: 130px;
+    padding: 0 35px;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.search-button:hover {
+    background: #005999;
+}
+
+/* ===== USER LOGIN + LOGOUT ===== */
+
+.user-login {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.user-login span {
+    white-space: nowrap;
+}
+
+/* Nút đăng xuất đẹp hơn */
+
+.logout-btn {
+    background: #ffffff;
+    color: #003b95;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logout-btn:hover {
+    background: #f0f6ff;
+    transform: translateY(-1px);
+}
+
+.logout-btn:active {
+    transform: scale(0.98);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media screen and (max-width: 1024px) {
+    .home-header-content {
+        width: 95%;
+    }
+
+    .header-title h1 {
+        font-size: 42px;
+    }
+
+    .header-title p {
+        font-size: 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-item,
+    .search-button {
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .top-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .center-content ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .header-title h1 {
+        font-size: 34px;
+    }
+
+    .header-title p {
+        font-size: 18px;
+    }
+}
