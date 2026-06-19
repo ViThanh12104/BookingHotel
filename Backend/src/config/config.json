@@ -7,9 +7,7 @@
     "port": 3306,
     "dialect": "mysql",
     "logging": false,
-    "query": {
-      "raw": true
-    },
+    "query": { "raw": true },
     "timezone": "+07:00"
   },
   "test": {
@@ -20,22 +18,20 @@
     "port": 3306,
     "dialect": "mysql",
     "logging": false,
-    "query": {
-      "raw": true
-    },
+    "query": { "raw": true },
     "timezone": "+07:00"
   },
   "production": {
-    "username": "root",
-    "password": "",
-    "database": "booking_hotel",
-    "host": "127.0.0.1",
-    "port": 3306,
+    "use_env_variable": "DATABASE_URL",
     "dialect": "mysql",
     "logging": false,
-    "query": {
-      "raw": true
-    },
-    "timezone": "+07:00"
+    "query": { "raw": true },
+    "timezone": "+07:00",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
