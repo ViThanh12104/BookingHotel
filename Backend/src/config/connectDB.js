@@ -1,10 +1,15 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('booking_hotel', 'root', null, {
-    host: 'localhost',
-    dialect: 'mysql',
-    logging: false
-});
+const sequelize = process.env.DATABASE_URL
+    ? new Sequelize(process.env.DATABASE_URL, {
+        dialect: 'mysql',
+        logging: false
+    })
+    : new Sequelize('booking_hotel', 'root', '', {
+        host: 'localhost',
+        dialect: 'mysql',
+        logging: false
+    });
 
 let connectDB = async () => {
     try {
