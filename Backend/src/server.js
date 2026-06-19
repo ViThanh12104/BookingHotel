@@ -13,8 +13,9 @@ require("dotenv").config();
 
 let app = express();
  
+// Thay vì để cứng localhost, hãy sử dụng biến môi trường
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: process.env.CLIENT_URL || "http://localhost:3000",
     credentials: true
 }));
 
@@ -45,7 +46,7 @@ const httpServer = http.createServer(app);
 
 const io = new Server(httpServer, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: process.env.CLIENT_URL || "http://localhost:3000",
         methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
         credentials: true
     }
