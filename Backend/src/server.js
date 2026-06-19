@@ -35,8 +35,6 @@ app.use(
 viewEngine(app);
 initWebRoute(app);
 
-connectDB();
-
 // Error Handling Middleware (MUST be AFTER all routes)
 app.use(notFoundHandler); // 404 handler
 app.use(errorHandler);    // Global error handler
@@ -62,6 +60,17 @@ io.on("connection", (socket) => {
     });
 });
 
-httpServer.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
-});
+// Trong server.js
+const startServer = async () => {
+    try {
+        await connectDB(); // Chờ kết nối database thành công
+        httpServer.listen(port, () => {
+            console.log(`Server is running on port: ${port}`);
+        });
+    } catch (error) {
+        console.error("Unable to connect to database:", error);
+        process.exit(1); // Dừng app nếu không kết nối được DB
+    }
+};
+
+startServer();
