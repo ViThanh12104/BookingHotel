@@ -15,15 +15,27 @@
   "test": {
     "username": "root",
     "password": "",
-    "database": "database_test",
+    "database": "booking_hotel",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "port": 3306,
+    "dialect": "mysql",
+    "logging": false,
+    "query": {
+      "raw": true
+    },
+    "timezone": "+07:00"
   },
   "production": {
     "username": "root",
     "password": "",
-    "database": "database_production",
+    "database": "booking_hotel",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "port": 3306,
+    "dialect": "mysql",
+    "logging": false,
+    "query": {
+      "raw": true
+    },
+    "timezone": "+07:00"
   }
 }
