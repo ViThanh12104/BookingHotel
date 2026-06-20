@@ -180,7 +180,7 @@ let sendBookingEmail = async (toEmail, bookingData) => {
             ">
 
                 <a
-                    href="http://localhost:3000"
+                    href="https://booking-hotel-bice.vercel.app"
                     style="
                         background:#2563eb;
                         color:white;
